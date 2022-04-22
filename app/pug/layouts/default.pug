@@ -1,0 +1,150 @@
+
+-var cmsTpl = '/'
+
+-var headerImg = "images/header.png"
+
+-var skillsImg1 = "images/skillsPS.png"  
+-var skillsImg2 = "images/skillsAI.png"
+-var skillsImg3 = "images/skillsAE.png"
+-var skillsImg4 = "images/skillsFigma.png"
+
+-var portfolioImg1 = "images/portfolio1.png"  
+-var portfolioImg2 = "images/portfolio2.png"
+-var portfolioImg3 = "images/portfolio3.png"
+
+-var blackStar = "images/blackStar.png"
+-var greyStar = "images/greyStar.png"
+
+-var links1 = "images/link1.png"
+-var links2 = "images/link2.png"
+-var links3 = "images/link3.png"
+-var links4 = "images/link4.png"
+
+mixin svg(id,cls)
+    -var cls = cls ? ' ' + cls : ''
+    svg(class='icon icon-' + id + cls width="100%" height="100%" xmlns="http://www.w3.org/2000/svg")
+        use(xlink:href=cmsTpl + 'images/svg/sprite.svg#' + id)
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='author' content='Программирование и верстка: @milkamil93.')
+        meta(name='viewport', content='width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1,height=device-height,viewport-fit=cover')
+        title Макет
+        base(href='/')
+        meta(name='description', content="")
+        meta(name='keywords', content="")
+        meta(property='og:title', content="")
+        meta(property="og:description" content="")
+        meta(property='og:type', content='website')
+        meta(property='og:url', content="")
+        meta(property='og:image', content=cmsTpl + 'assets/images/logo.png')
+        meta(name='theme-color' content="#fff")
+        link(rel='stylesheet' href=cmsTpl + 'css/vendor.min.css')
+        link(rel='stylesheet' href=cmsTpl + 'css/common.min.css')
+         
+    body
+        block main
+        header.header
+            .navbar
+                ul.navbar-ul 
+                    li.navbar-li.nav-active Home
+                    li.navbar-li About me
+                    li.navbar-li Skills
+                    li.navbar-li Portfolio
+                    li.navbar-li Contacts
+            hr.navbar-line
+            .head
+                p.head-name Denis <br> Novik
+                p.head-info UX | UI designer <br> 24 years old, Minsk
+                p.head-language <span class="span-lang">RU</span> | ENG
+                img(src=headerImg).headerImg 
+
+        main.main
+            .about-me
+                .about-me-textbox
+                    .title-box
+                        p.title-text1 About me 
+                    .text-box
+                        p.text Hi, I'm Denis – UX/UI designer from Minsk. <br> I'm interested in design and everything connected with it. <br> 
+                        p.text I'm studying at courses "Web and mobile design <br> interfaces" in IT-Academy. <br>
+                        p.text Ready to implement excellent projects <br> with wonderful people.
+            .skills
+                .skills-textbox1
+                    p.title-text2 Skills
+                .skills-textbox2
+                    p.skills-text I work in such programs as
+                .skills-textbox3
+                    .flexBox
+                        img(src=skillsImg1).skillsImg
+                        p.flexBoxText Adobe<br> Photoshop
+                        .stars
+                            img(src=blackStar).blackStar
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=greyStar).greyStar  
+                    .flexBox 
+                        img(src=skillsImg2).skillsImg
+                        p.flexBoxText Adobe<br> Illustrator
+                        .stars
+                            img(src=blackStar).blackStar
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=greyStar).greyStar 
+                            img(src=greyStar).greyStar
+                    .flexBox
+                        img(src=skillsImg3).skillsImg
+                        p.flexBoxText After<br> Effects
+                        .stars
+                            img(src=blackStar).blackStar
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=greyStar).greyStar
+                    .F-Box.flexBox 
+                        img(src=skillsImg4).skillsImg
+                        p.F-text.flexBoxText Figma
+                        .stars
+                            img(src=blackStar).blackStar
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=blackStar).blackStar 
+                            img(src=greyStar).greyStar
+                    
+            .portfolio 
+                .portfolio-color-box
+                    .portfolio-textbox1
+                        p.title-text3  Portfolio
+                    .portfolio-textbox2
+                        .portfolio-block
+                            img(src=portfolioImg1).portfolioImg
+                            a.portfolioLink Online fashion store - Homepage
+                        .portfolio-block
+                            img(src=portfolioImg2).portfolioImg
+                            a.portfolioLink Reebok Store - Concept
+                        .portfolio-block
+                            img(src=portfolioImg3).portfolioImg
+                            a.portfolioLink Braun Landing Page - Concept
+
+        footer.footer
+            .footer-mainbox
+                .footer-textbox1
+                    p.Footer-title Contacts
+                .footer-textbox2
+                    p.Footer-text1 Want to know more or just chat? <br> You are welcome!
+                .footer-buttonbox
+                    p.text-button Send message
+                .footer-LinksBox
+                    .links-images
+                        img(src=links1).linksImg
+                        img(src=links2).linksImg
+                        img(src=links3).linksImg
+                        img(src=links4).linksImg
+                .footer-textbox3
+                    p.Footer-text2 Like me on <br> LinkedIn, Instagram, Behance, Dribble
+
+        script(src=cmsTpl + 'js/vendor.min.js')
+        script(src=cmsTpl + 'js/common.min.js')
